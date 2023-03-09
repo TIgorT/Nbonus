@@ -3,14 +3,14 @@ public class Main {
         byte remains = 100; // Остаток у клиентов на счету.
         byte bonusRubles = 1; // Сумма бонусов за 100 руб.
         int replenishment = 1100; // Сумма пополнения счёта второго клиента.
-        int n;
+        int balance;
         if (replenishment > 1_000) {
-            n = replenishment / remains * bonusRubles;
+            balance = replenishment / remains * bonusRubles;
         } else {
-            n = 0;
+            balance = 0;
         }
         System.out.println("Клиент пополнил счёт на: " + replenishment);
-        System.out.println("Начисленно бонусных рублей клиенту : " + n);
-        System.out.println("Остаток на счёту у клиента : " + (replenishment + remains + n));
+        System.out.println("Начисленно бонусных рублей клиенту : " + balance);
+        System.out.println("Остаток на счёту у клиента : " + (replenishment + remains + balance));
     }
 }
